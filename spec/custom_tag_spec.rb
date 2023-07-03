@@ -110,7 +110,7 @@ RSpec.describe CustomTag do
   it "operates on a whole page very quickly" do
     doc = File.read("spec/fixtures/normal.html")
     starting = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-    output = CustomTag.parse_and_replace(doc)
+    CustomTag.parse_and_replace(doc)
     ending = Process.clock_gettime(Process::CLOCK_MONOTONIC)
     milliseconds = (ending - starting) * 1000
     expect(milliseconds).to be < 25
