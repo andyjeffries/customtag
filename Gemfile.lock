@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    custom_tag (0.1.0)
+    custom_tag (0.2.0)
       nokogiri
 
 GEM
