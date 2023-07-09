@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = "CustomTag allows you to use custom HTML tags in your Rails project and have them be replaced with standard HTML tags and attributes"
   spec.description = "Jealous of custom <tags> in JS frameworks and want them in your Rails apps? CustomTag allows you to use custom HTML tags in your Rails project and have them be replaced with standard HTML tags and attributes."
   spec.homepage = "https://github.com/andyjeffries/customtag"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.required_ruby_version = ">= 2.7.0"
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 

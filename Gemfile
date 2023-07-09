@@ -11,5 +11,6 @@ gem "rspec", "~> 3.0"
 
 gem "rubocop"
 gem "rubocop-performance"
+gem 'rubocop-rake', require: false
 
 gem "rack"

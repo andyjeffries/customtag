@@ -62,6 +62,8 @@ Lint/StructNewOverride:
   Enabled: true
 Style/ExponentialNotation:
   Enabled: true
+Style/ClassVars:
+  Enabled: false
 Style/HashEachMethods:
   Enabled: true
 Style/Documentation:
