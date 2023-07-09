@@ -1,6 +1,5 @@
 require:
   - rubocop-performance
-  - rubocop-rails
 
 AllCops:
   SuggestExtensions: false
@@ -21,12 +20,6 @@ AllCops:
 Performance:
   Exclude:
     - 'spec/**/*'
-Rails/UnknownEnv:
-  Environments:
-    - development
-    - test
-    - staging
-    - production
 Style/FormatStringToken:
   EnforcedStyle: unannotated
 Style/FetchEnvVar:
@@ -37,11 +30,7 @@ Naming/BlockForwarding:
   EnforcedStyle: explicit
 Metrics/ClassLength:
   Enabled: false
-Rails/EagerEvaluationLogMessage:
-  Enabled: false
 Naming/MethodParameterName:
-  Enabled: false
-Rails/I18nLocaleTexts:
   Enabled: false
 Lint/SuppressedException:
   Enabled: false
@@ -88,14 +77,6 @@ Layout/SpaceBeforeSemicolon:
 Style/ClassAndModuleChildren:
   Enabled: false
 Metrics/AbcSize:
-  Enabled: false
-Rails/IndexBy:
-  Enabled: true
-Rails/IndexWith:
-  Enabled: true
-Rails/HelperInstanceVariable:
-  Enabled: false
-Rails/SkipsModelValidations:
   Enabled: false
 Lint/RescueException:
   Enabled: false
@@ -164,9 +145,6 @@ Style/HashSyntax:
 
 Layout/FirstArgumentIndentation:
   Enabled: true
-
-Rails/FilePath:
-  Enabled: false
 
 Style/RescueModifier:
   Enabled: false

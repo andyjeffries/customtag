@@ -26,7 +26,7 @@ module CustomTag
         build(tag_name, attrs, content)
       end
 
-      doc = Nokogiri::XML.parse(ret)
+      doc = Nokogiri::XML.fragment(ret)
       doc.search("*").each do |element|
         if CustomTag::Base.tags[element.name]
           element.replace(CustomTag::Base.replace(element.name, element.attributes, element.content))

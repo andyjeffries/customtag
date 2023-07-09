@@ -3,6 +3,8 @@
 require "nokogiri"
 require_relative "custom_tag/version"
 require_relative "custom_tag/base"
+require_relative "custom_tag/middleware"
+require_relative "custom_tag/railties"
 
 module CustomTag
   class Error < StandardError; end
@@ -14,6 +16,6 @@ module CustomTag
         element.replace(CustomTag::Base.replace(element.name, element.attributes, element.children.to_html))
       end
     end
-    doc.to_html
+    doc.to_html(save_with: 0)
   end
 end
