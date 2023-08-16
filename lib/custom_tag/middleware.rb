@@ -7,9 +7,15 @@ module CustomTag
     def call(env)
       code, headers, response = @app.call(env)
 
-      response[0] = CustomTag.parse_and_replace(response[0]) if headers["Content-Type"]&.include?("text/html")
+      response_body = if response.respond_to?(:body)
+        response.body
+      else
+        response[0]
+      end
 
-      [code, headers, response]
+      response_body = CustomTag.parse_and_replace(response_body) if headers["Content-Type"]&.include?("text/html")
+
+      [code, headers, [response_body]]
     end
   end
 end

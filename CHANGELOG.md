@@ -1,5 +1,9 @@
 # CHANGELOG for CustomTag
 
+## 0.3.1 - 16 August 2023
+
+Handling `ActionDispatch::Response::RackBody` as well as array body responses.
+
 ## 0.3.0 - 16 August 2023
 
 Configured Railtie to correctly use Rack middleware.
