@@ -1,5 +1,9 @@
 # CHANGELOG for CustomTag
 
+## 0.3.2 - 16 August 2023
+
+Minor tweaks in debugging as I go through a Rails application using it in anger.
+
 ## 0.3.1 - 16 August 2023
 
 Handling `ActionDispatch::Response::RackBody` as well as array body responses.

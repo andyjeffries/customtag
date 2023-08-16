@@ -26,12 +26,13 @@ module CustomTag
         build(tag_name, attrs, content)
       end
 
-      doc = Nokogiri::XML.fragment(ret)
+      doc = Nokogiri::HTML.fragment(ret)
       doc.search("*").each do |element|
         if CustomTag::Base.tags[element.name]
-          element.replace(CustomTag::Base.replace(element.name, element.attributes, element.content))
+          element.replace(CustomTag::Base.replace(element.name, element.attributes, element.children.to_html))
         end
       end
+
       doc.to_html.strip
     end
 
